@@ -1,26 +1,9 @@
 <!doctype HTML>
 <html>
-<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-<body style='margin:0px; overflow:hidden;'>
-<!-- こっからA-Frame -->
-<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
-  <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
-  <a-assets>
-    <!-- horseのモデルを読み込む　-->
-    <a-asset-item id="horse-glb" src="model_horse/horse.glb"></a-asset-item>
-    </a-assets>
-
-　<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
-  <a-marker type='pattern' url='marker/pattern-Abura_01.patt'>
-    <a-entity gltf-model="#horse-glb" play-all-model-animations="" position="0 0 0" rotation="270 -180 90" scale="0.3 0.3 0.3" visible="true">
-    </a-entity>
-  </a-marker>
-
-  <!-- arなのでこんな感じでカメラが必要らしい。 -->
-  <a-entity camera></a-entity>
-</a-scene>
-<!-- ここまででA-Frameおわり -->
+<body>
+  <h1>urlに以下の文字列を追加することでARで動物を召喚できるよ</h1>
+  <p>/horse</p>
+  <p>/kamo</p>
+  <p>/fox</p>
 </body>
-</html>
 </html>
